@@ -7,11 +7,12 @@ namespace TeachMeSkills.DotNet.Task6
     {
         static void Main(string[] args)
         {
-            int operand1 = 3;
-            int operand2 = 5;
-            Console.Write("Choose operaton");
+            Random random = new Random();
+            double operand1 = random.Next(1,10);
+            double operand2 = random.Next(1,10);
+            Console.Write("Choose operaton: ");
             string sign = Console.ReadLine();
-            switch(sign)
+            switch (sign)
             {
                 case "+":
                     Console.WriteLine(operand1 + operand2);
@@ -23,19 +24,18 @@ namespace TeachMeSkills.DotNet.Task6
                     Console.WriteLine(operand1 * operand2);
                     break;
                 case "/":
-                    if(operand1==0 || operand2==0)
+                    if (operand1 == 0 || operand2 == 0)
                     {
                         Console.WriteLine("Incorrect operation!");
                         break;
                     }
-                    Console.WriteLine(operand1 / operand2);
-
-                    break;
-
+                    else
+                    {
+                        Console.WriteLine(operand1 / operand2);
+                        break;
+                    }
             }
-
-
-            Console.WriteLine("Hello World!");
+            Console.ReadLine();
         }
     }
 }
