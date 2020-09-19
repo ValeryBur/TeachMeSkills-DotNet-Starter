@@ -6,17 +6,29 @@ namespace TeachMeSkills.DotNet.Task5
     {
         static void Main(string[] args)
         {
-            int a = 5;
-            int b = 10;
-            int add = a + b;
-            int minus = a - b;
-            int multiply = a * b;
-            int divide = a / b;
-            Console.WriteLine(add);
-            Console.WriteLine(minus);
-            Console.WriteLine(multiply);
-            Console.WriteLine(divide);
+            double a = 5;
+            double b = 10;
+            Console.WriteLine(Add(5, 10));
+            Console.WriteLine(Substract(5, 10));
+            Console.WriteLine(Multiply(5, 10));
+            Console.WriteLine(Divide(5, 10));
             Console.ReadLine();
+        }
+        public static double Add(double a, double b)
+        {
+            return a + b;
+        }
+        public static double Substract(double a, double b)
+        {
+            return a - b;
+        }
+        public static double Multiply(int a, int b)
+        {
+            return a * b;
+        }
+        public static double Divide(double a, double b)
+        {
+            return a / b;
         }
     }
 }
