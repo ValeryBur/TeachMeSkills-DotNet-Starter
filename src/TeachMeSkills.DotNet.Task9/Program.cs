@@ -11,14 +11,32 @@ namespace TeachMeSkills.DotNet.Task9
             Console.Write("Input number: ");
             string userInput1 = Console.ReadLine();
             bool canParse1 = false;
-            canParse1 = int.TryParse(userInput1, out int parsedNumber);
-            EvenOrOddV1(parsedNumber);
+            canParse1 = int.TryParse(userInput1, out int parsedNumber1);
+            EvenOrOddV1(parsedNumber1);
 
             Console.WriteLine("Welcome to check out application Version 2!");
             Console.Write("Input number: ");
-            string userInput = Console.ReadLine();
-            char[] arr = userInput.ToCharArray();
+            string userInput2 = Console.ReadLine();
+            char[] arr = userInput2.ToCharArray();
             EvenOrOddV2(arr);
+
+            Console.WriteLine("Welcome to check out application Version 3!");
+            Console.Write("Input number: ");
+            string userInput3 = Console.ReadLine();
+            bool canParse3 = false;
+            canParse1 = int.TryParse(userInput1, out int parsedNumber3);
+            const int divider = 2;
+            int result;
+            int residue = Math.DivRem(parsedNumber3, divider, out result);
+            if(result == 0)
+            {
+                Console.WriteLine("Number is even");
+            }
+            else
+            {
+                Console.WriteLine("Number is odd");
+            }
+            Console.ReadLine();
         }
 
             public static void EvenOrOddV1(int a)
