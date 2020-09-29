@@ -9,84 +9,63 @@ namespace TeachMeSkills.DotNet.Task19
         {
             Console.WriteLine("Welcome to Number Checker!");
             Console.Write("Input the first range number: ");
-            int firstRangeNumber = InputValue();
+            uint firstRangeNumber = InputValue();
             Console.Write("Input the second range number: ");
-            int secondRangeNumber = InputValue();
-            CheckNumber(firstRangeNumber, secondRangeNumber);
-            Console.ReadLine();
-
-        }
-        public static (int[], int[]) CheckNumber(int firstRangeNumber, int secondRangeNumber)
-        {
-            int countSimple = 0;
-            int countComposite = 0;
-            int tempSimpleCount = 0;
-            for (int i = firstRangeNumber + 1; i < secondRangeNumber; i++)
+            uint secondRangeNumber = InputValue();
+            Console.WriteLine($"Simple numbers are:\t");
+            for (uint i = firstRangeNumber; i <= secondRangeNumber; i++)
             {
-                if(i == 1)
+                if (i == 1)
                 {
-                    countComposite++;
                     break;
                 }
-                for (int j = 2; j < i / 2; j++)
+                if (IsSimple(i))
                 {
-                    if (i % j == 0)
-                    {
-                        countComposite++;
-                        break;
-                    }
-                    else
-                    {
-                        continue;
-                    }
+                    Console.Write($"\t{i}");
                 }
             }
-            Console.WriteLine($"Composite numbers count is: {countComposite}");
-            Console.ReadLine();
-            for (int i = firstRangeNumber + 1; i < secondRangeNumber; i++)
+            Console.WriteLine($"\nComposite numbers are:");
+            for (uint i = firstRangeNumber; i <= secondRangeNumber; i++)
             {
-                for (int j = 2; j <= i; j++)
+                if (i == 1 || IsSimple(i) == false)
                 {
-                    if (i % j != 0)
+                    Console.Write($"\t{i}");
+                }
+                if (IsSimple(i))
+                {
+                    continue;
+                }
+            }
+            Console.ReadLine();
+
+        }
+
+        public static bool IsSimple(uint number)
+        {
+            bool result = true;
+            if (number > 1)
+            {
+                for (uint i = 2; i < number / 2; i++)
+                {
+                    if (number % i == 0)
                     {
-                        tempSimpleCount++;
-                        continue;
-                    }
-                    else if (i % j == 0 && i == j)
-                    {
-                        tempSimpleCount++;
-                        continue;
-                    }
-                    else
-                    {
+                        result = false;
                         break;
                     }
                 }
-                if (tempSimpleCount == (i - 1))
-                {
-                    countSimple++;
-                    tempSimpleCount = 0;
-                }
             }
-
-            Console.WriteLine($"Simple numbers count is: {countSimple}");
-            Console.ReadLine();
-            int[] a = new int[countComposite];
-            int[] b = new int[countSimple];
-
-            return (a, b);
-
-
-            //int[] simpleNumbers;
-
-            //int[] compositeNumbers = new int [countComposite];
-            //return;
+            else
+            {
+                result = false;
+            }
+            return result;
         }
-        public static int InputValue()
+
+        public static uint InputValue()
         {
             string str = Console.ReadLine();
             bool canParse = false;
-            canParse = int.TryParse(str, out int parsedValue);
+            canParse = uint.TryParse(str, out uint parsedValue);
             return parsedValue;
         }
     }

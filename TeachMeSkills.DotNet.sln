@@ -48,7 +48,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TeachMeSkills.DotNet.Task17
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TeachMeSkills.DotNet.Task18", "src\TeachMeSkills.DotNet.Task18\TeachMeSkills.DotNet.Task18.csproj", "{F48405A4-432D-488B-AFE8-3C1EDAB4B6BA}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TeachMeSkills.DotNet.Task19. Not Ready", "src\TeachMeSkills.DotNet.Task19\TeachMeSkills.DotNet.Task19. Not Ready.csproj", "{A2173EEF-6B28-4DE7-8EEF-0972DB2D6992}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TeachMeSkills.DotNet.Task19", "src\TeachMeSkills.DotNet.Task19\TeachMeSkills.DotNet.Task19.csproj", "{A2173EEF-6B28-4DE7-8EEF-0972DB2D6992}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TeachMeSkills.DotNet.Task20", "src\TeachMeSkills.DotNet.Task20\TeachMeSkills.DotNet.Task20.csproj", "{0D877B89-D1A4-4E12-9E4A-FDEA2A67BDFE}"
 EndProject
