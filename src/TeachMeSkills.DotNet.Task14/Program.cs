@@ -23,6 +23,11 @@ namespace TeachMeSkills.DotNet.Task14
             Console.Write("Input equilateral triangle height: ");
             int equilateralTriangleHeight = InputNumber();
             EquilateralTriangle(equilateralTriangleHeight);
+            Console.WriteLine("Rhombus");
+            Console.Write("Input rhombus height (min value 3): ");
+            int rhombusHeight = InputNumber();
+            Rhombus(rhombusHeight);
+
 
             Console.ReadLine();
 
@@ -34,7 +39,7 @@ namespace TeachMeSkills.DotNet.Task14
             canParse = int.TryParse(userInput, out int parsedNumber);
             return parsedNumber;
         }
-        public static void Rectangle(int sideA, int sideB)
+        public static void Rectangle(int sideA, int sideB)//прямоугольник
         {
             for (int i = 0; i < sideA; i++)
             {
@@ -46,7 +51,7 @@ namespace TeachMeSkills.DotNet.Task14
             }
             Console.ReadLine();
         }
-        public static void RightTriangle(int sideA, int sideB)
+        public static void RightTriangle(int sideA, int sideB)//прямоугольный треугольник
         {
             for (int i = 0; i < sideA; i++)
             {
@@ -59,56 +64,52 @@ namespace TeachMeSkills.DotNet.Task14
             }
             Console.ReadLine();
         }
-        public static void EquilateralTriangle(int equilateralTriangleHeight)
+        public static void EquilateralTriangle(int equilateralTriangleHeight)//равносторонний треугольник
         {
-            for (int i = 0; i < equilateralTriangleHeight; i++)
+            for (int i = 1; i < equilateralTriangleHeight; i++)
             {
-                for (int j = equilateralTriangleHeight / 2; j < equilateralTriangleHeight; j++)
+                for (int j = i; j < equilateralTriangleHeight; j++)
+                {
+                    Console.Write(" ");
+                }
+                for (int k = 1; k <= i; k++)
                 {
                     Console.Write("*");
+                    Console.Write(" ");
                 }
-                Console.WriteLine(" ");
+                Console.WriteLine();
             }
+            Console.ReadLine();
+        }
+        public static void Rhombus(int height)//ромб
+        {
+            int i;
+            int j;
+            int center = height / 2;
+            for (i = 0; i < height; i++)
+            {
+                for (j = 0; j < height; j++)
+                {
+                    if (i <= center)
+                    {
+                        if (j >= center - i && j <= center + i)
+                            Console.Write("*");
+                        else
+                            Console.Write(" ");
+                    }
+                    else
+                    {
+                        if (j >= center + i - height + 1 && j <= center - i + height - 1)
+                            Console.Write("*");
+                        else
+                            Console.Write(" ");
+                    }
+                }
+                Console.WriteLine();
+            }
+            Console.ReadLine();
         }
     }
 }
-//        int h, h1, h2, h3, h4, h5, h6; - равносторонний треугольник и ромб!!!!!  изучить код!!!!!
-//        int s;
-//        h = Int32.Parse(Console.ReadLine());
 
-//            h /= 2;
-
-//            h1 = h - (h - 1);
-//            h2 = h;
-//            h3 = h - (h - 1);
-//            h4 = 2 * h;
-
-//            s = h;
-//            if (s == h) { h++; }
-
-//            for (int c1 = 0; c1<h; c1++, h2--, h1 += 2)
-//            {
-//                for (int c2 = 0; c2<h2; c2++)
-//                { Console.Write(" "); }
-//for (int c3 = 0; c3 < h1; c3++)
-//{ Console.Write("*"); }
-//Console.WriteLine();
-//            }
-//            for (int c4 = 0; c4 < h; c4++, h3++, h4 -= 2)
-//{
-//    for (int c5 = 0; c5 < h3; c5++)
-//    {
-//        Console.Write(" ");
-//    }
-//    for (int c6 = 0; c6 < h4 - 1; c6++)
-//    {
-//        Console.Write("*");
-//    }
-//    Console.WriteLine();
-//}
-
-//Console.Read();
-//        }
-//    }
-//}
 
