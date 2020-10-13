@@ -6,7 +6,14 @@ namespace TeachMeSkills.DotNet.Task12._Not_Ready
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            bool a = false;
+            bool b = false;
+            if(a || b == !(!a && !b))
+            {
+                Console.WriteLine("Закон Де Моргана");
+            }
+            Console.ReadLine();
+
         }
     }
 }
