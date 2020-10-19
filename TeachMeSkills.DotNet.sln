@@ -54,9 +54,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TeachMeSkills.DotNet.Task20
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TeachMeSkills.DotNet.Task21", "src\TeachMeSkills.DotNet.Task21\TeachMeSkills.DotNet.Task21.csproj", "{B1AE50C8-1CA9-4D0C-B7FB-B8C43FD587CC}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TeachMeSkills.DotNet.Task22. Not Ready(DateTime)", "src\TeachMeSkills.DotNet.Task22\TeachMeSkills.DotNet.Task22. Not Ready(DateTime).csproj", "{25BE67B0-083E-4C76-BFCC-7D830555A01F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TeachMeSkills.DotNet.Task22", "src\TeachMeSkills.DotNet.Task22\TeachMeSkills.DotNet.Task22.csproj", "{25BE67B0-083E-4C76-BFCC-7D830555A01F}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TeachMeSkills.DotNet.Task23. Not Ready", "src\TeachMeSkills.DotNet.Task23\TeachMeSkills.DotNet.Task23. Not Ready.csproj", "{127D546E-D3C0-417E-8441-9D01410B1957}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TeachMeSkills.DotNet.Task23", "src\TeachMeSkills.DotNet.Task23\TeachMeSkills.DotNet.Task23.csproj", "{127D546E-D3C0-417E-8441-9D01410B1957}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TeachMeSkills.DotNet.Task24", "src\TeachMeSkills.DotNet.Task24\TeachMeSkills.DotNet.Task24.csproj", "{78A66180-E970-4ABC-B67C-F4D9F9D05FC1}"
 EndProject
